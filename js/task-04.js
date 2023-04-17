@@ -9,16 +9,16 @@
 
 
 const counterValue = document.querySelector('#value');
-console.log(counterValue)
+counterValue.textContent = 0;
+
 
 const decrementBtc = document.querySelector('[data-action="decrement"]');
-console.log(decrementBtc)
+const incrementBtc = document.querySelector('[data-action="increment"]');
+
 decrementBtc.addEventListener('click', () => {
-    console.log("Button was clicked");
+  counterValue.textContent = Number(counterValue.textContent) - 1;
 })
 
-const incrementBtc = document.querySelector('[data-action="increment"]');
-console.log(incrementBtc)
 incrementBtc.addEventListener('click', () => {
-  console.log("Button was clicked");
+  counterValue.textContent = Number(counterValue.textContent) + 1;
 })
